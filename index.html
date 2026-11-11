@@ -313,6 +313,8 @@
     .badge { font-weight: 600; }
     .badge-accepted { color: var(--rust); background: var(--rust-tint); }
     .badge-topic { color: var(--accent); background: var(--tint); font-weight: 500; }
+    .badge-rep { color: var(--accent); background: var(--tint); }
+    .badge-rep::before { content: "\2605"; margin-right: 4px; font-size: 0.72rem; }
 
     /* Contact */
     .contact-card {
@@ -492,8 +494,20 @@
           Turán numbers and those of Nikiforov on the vertex-spectral version. By
           developing an edge-spectral stability method, we also solved the
           edge-spectral extremal problems for color-critical graphs and
-          almost-bipartite graphs. In extremal set theory, I study intersecting and
-          cross-intersecting families.
+          almost-bipartite graphs.
+        </p>
+        <p data-i18n="about-2b">
+          More recently, my collaborators and I proved that Sidorenko’s conjecture is
+          equivalent to its spectral strengthening. As an application, we obtained
+          asymptotically sharp lower bounds on the number of copies of complete
+          bipartite graphs and even cycles in graphs with a given number of edges and
+          large spectral radius. I also developed an entropy method that links weighted
+          Turán theorems to spectral ones. For every color-critical graph <i>F</i>,
+          this method gives sharp bounds on the spectral radius of <i>F</i>-free graphs
+          in terms of walk counts. These bounds place the vertex-spectral and
+          edge-spectral Turán problems in a single framework. Beyond spectral
+          problems, I also study intersecting and cross-intersecting families in
+          extremal set theory.
         </p>
         <p data-i18n="about-3">
           I am currently supported by the China Postdoctoral Science Foundation
@@ -574,58 +588,59 @@
         <div class="pub-toolbar">
           <div class="filters" role="group" aria-label="Filter preprints by topic" data-target="preprint-list">
             <button class="chip" type="button" data-filter="all" aria-pressed="true" data-i18n="chip-all">All</button>
+            <button class="chip" type="button" data-filter="rep" aria-pressed="false" data-i18n="chip-rep">Representative</button>
             <button class="chip" type="button" data-filter="graph" aria-pressed="false" data-i18n="chip-graph">Graph Theory</button>
             <button class="chip" type="button" data-filter="sets" aria-pressed="false" data-i18n="chip-sets">Extremal Set Theory</button>
           </div>
           <p class="pub-note" data-i18n="ca-note"><sup class="ca">*</sup> Corresponding author</p>
         </div>
         <ol class="paper-list" id="preprint-list">
-          <li class="paper" data-topic="graph">
+          <li class="paper" data-topic="graph rep" data-idx="0" data-rep="7">
             <span class="num"></span>
             <div>
               <h4><a href="https://arxiv.org/abs/2512.22482">Spectral supersaturation for color-critical graphs</a></h4>
               <p class="authors">Longfei Fang, <strong>Yongtao Li</strong>, Huiqiu Lin, Jie Ma</p>
               <p class="venue">Preprint, 2025.</p>
-              <p class="paper-links"><a href="https://arxiv.org/abs/2512.22482">arXiv:2512.22482</a><a href="https://arxiv.org/pdf/2512.22482">PDF</a></p>
+              <p class="paper-links"><span class="badge badge-rep" data-i18n="badge-rep">Representative</span><a href="https://arxiv.org/abs/2512.22482">arXiv:2512.22482</a><a href="https://arxiv.org/pdf/2512.22482">PDF</a></p>
             </div>
           </li>
-          <li class="paper" data-topic="graph">
+          <li class="paper" data-topic="graph rep" data-idx="1" data-rep="6">
             <span class="num"></span>
             <div>
               <h4><a href="https://arxiv.org/abs/2608.24388">An entropy bridge from weighted to spectral Turán theorems</a></h4>
               <p class="authors"><strong>Yongtao Li</strong></p>
               <p class="venue">Preprint, 2026.</p>
-              <p class="paper-links"><a href="https://arxiv.org/abs/2608.24388">arXiv:2608.24388</a><a href="https://arxiv.org/pdf/2608.24388">PDF</a></p>
+              <p class="paper-links"><span class="badge badge-rep" data-i18n="badge-rep">Representative</span><a href="https://arxiv.org/abs/2608.24388">arXiv:2608.24388</a><a href="https://arxiv.org/pdf/2608.24388">PDF</a></p>
             </div>
           </li>
-          <li class="paper" data-topic="graph">
+          <li class="paper" data-topic="graph rep" data-idx="2" data-rep="8">
             <span class="num"></span>
             <div>
               <h4><a href="https://arxiv.org/abs/2408.01709">A spectral Lovász–Simonovits theorem</a></h4>
               <p class="authors"><strong>Yongtao Li</strong>, Lihua Feng<sup class="ca" title="Corresponding author">*</sup>, Yuejian Peng</p>
               <p class="venue">Preprint, 2024.</p>
-              <p class="paper-links"><a href="https://arxiv.org/abs/2408.01709">arXiv:2408.01709</a><a href="https://arxiv.org/pdf/2408.01709">PDF</a></p>
+              <p class="paper-links"><span class="badge badge-rep" data-i18n="badge-rep">Representative</span><a href="https://arxiv.org/abs/2408.01709">arXiv:2408.01709</a><a href="https://arxiv.org/pdf/2408.01709">PDF</a></p>
             </div>
           </li>
-          <li class="paper" data-topic="graph">
+          <li class="paper" data-topic="graph rep" data-idx="3" data-rep="9">
             <span class="num"></span>
             <div>
               <h4><a href="https://arxiv.org/abs/2508.15271">An edge-spectral Erdős–Stone–Simonovits theorem and its stability</a></h4>
               <p class="authors"><strong>Yongtao Li</strong>, Hong Liu, Shengtong Zhang</p>
               <p class="venue">Preprint, 2025.</p>
-              <p class="paper-links"><a href="https://arxiv.org/abs/2508.15271">arXiv:2508.15271</a><a href="https://arxiv.org/pdf/2508.15271">PDF</a></p>
+              <p class="paper-links"><span class="badge badge-rep" data-i18n="badge-rep">Representative</span><a href="https://arxiv.org/abs/2508.15271">arXiv:2508.15271</a><a href="https://arxiv.org/pdf/2508.15271">PDF</a></p>
             </div>
           </li>
-          <li class="paper" data-topic="graph">
+          <li class="paper" data-topic="graph rep" data-idx="4" data-rep="10">
             <span class="num"></span>
             <div>
               <h4><a href="https://arxiv.org/abs/2605.26614">Spectral Sidorenko inequalities and edge-spectral supersaturation</a></h4>
               <p class="authors"><strong>Yongtao Li</strong>, Wilson Lin, Hong Liu, Shengtong Zhang</p>
               <p class="venue">Preprint, 2026.</p>
-              <p class="paper-links"><a href="https://arxiv.org/abs/2605.26614">arXiv:2605.26614</a><a href="https://arxiv.org/pdf/2605.26614">PDF</a></p>
+              <p class="paper-links"><span class="badge badge-rep" data-i18n="badge-rep">Representative</span><a href="https://arxiv.org/abs/2605.26614">arXiv:2605.26614</a><a href="https://arxiv.org/pdf/2605.26614">PDF</a></p>
             </div>
           </li>
-          <li class="paper" data-topic="graph">
+          <li class="paper" data-topic="graph" data-idx="5">
             <span class="num"></span>
             <div>
               <h4><a href="https://arxiv.org/abs/2508.13643">A spectral counterpart of the Erdős–Simonovits problem</a></h4>
@@ -634,7 +649,7 @@
               <p class="paper-links"><a href="https://arxiv.org/abs/2508.13643">arXiv:2508.13643</a><a href="https://arxiv.org/pdf/2508.13643">PDF</a></p>
             </div>
           </li>
-          <li class="paper" data-topic="graph">
+          <li class="paper" data-topic="graph" data-idx="6">
             <span class="num"></span>
             <div>
               <h4><a href="https://arxiv.org/abs/2601.04671">More on spectral supersaturation for the bowtie</a></h4>
@@ -643,7 +658,7 @@
               <p class="paper-links"><a href="https://arxiv.org/abs/2601.04671">arXiv:2601.04671</a><a href="https://arxiv.org/pdf/2601.04671">PDF</a></p>
             </div>
           </li>
-          <li class="paper" data-topic="graph">
+          <li class="paper" data-topic="graph" data-idx="7">
             <span class="num"></span>
             <div>
               <h4><a href="https://arxiv.org/abs/2604.24077">An exponentially small gap of the Perron vector on independent sets</a></h4>
@@ -652,7 +667,7 @@
               <p class="paper-links"><a href="https://arxiv.org/abs/2604.24077">arXiv:2604.24077</a><a href="https://arxiv.org/pdf/2604.24077">PDF</a></p>
             </div>
           </li>
-          <li class="paper" data-topic="graph">
+          <li class="paper" data-topic="graph" data-idx="8">
             <span class="num"></span>
             <div>
               <h4><a href="https://arxiv.org/abs/2604.26385">A complete solution to a conjecture on distance spectral radius</a></h4>
@@ -661,7 +676,7 @@
               <p class="paper-links"><a href="https://arxiv.org/abs/2604.26385">arXiv:2604.26385</a><a href="https://arxiv.org/pdf/2604.26385">PDF</a></p>
             </div>
           </li>
-          <li class="paper" data-topic="graph">
+          <li class="paper" data-topic="graph" data-idx="9">
             <span class="num"></span>
             <div>
               <h4><a href="https://arxiv.org/abs/2607.01073">An edge-spectral supersaturation of Mubayi’s theorem for color-critical graphs</a></h4>
@@ -670,7 +685,7 @@
               <p class="paper-links"><a href="https://arxiv.org/abs/2607.01073">arXiv:2607.01073</a><a href="https://arxiv.org/pdf/2607.01073">PDF</a></p>
             </div>
           </li>
-          <li class="paper" data-topic="graph">
+          <li class="paper" data-topic="graph" data-idx="10">
             <span class="num"></span>
             <div>
               <h4><a href="https://arxiv.org/abs/2607.16746">Supersaturation in Nosal graphs: Triangles and books</a></h4>
@@ -679,7 +694,7 @@
               <p class="paper-links"><a href="https://arxiv.org/abs/2607.16746">arXiv:2607.16746</a><a href="https://arxiv.org/pdf/2607.16746">PDF</a></p>
             </div>
           </li>
-          <li class="paper" data-topic="graph">
+          <li class="paper" data-topic="graph" data-idx="11">
             <span class="num"></span>
             <div>
               <h4><a href="https://arxiv.org/abs/2610.06038">Optimal spectral supersaturation for cliques and odd cycles</a></h4>
@@ -688,7 +703,7 @@
               <p class="paper-links"><a href="https://arxiv.org/abs/2610.06038">arXiv:2610.06038</a><a href="https://arxiv.org/pdf/2610.06038">PDF</a></p>
             </div>
           </li>
-          <li class="paper" data-topic="graph">
+          <li class="paper" data-topic="graph" data-idx="12">
             <span class="num"></span>
             <div>
               <h4><a href="https://arxiv.org/abs/2609.20225">The spectral Erdős book theorem: Sharp bounds and stability</a></h4>
@@ -697,7 +712,7 @@
               <p class="paper-links"><a href="https://arxiv.org/abs/2609.20225">arXiv:2609.20225</a><a href="https://arxiv.org/pdf/2609.20225">PDF</a></p>
             </div>
           </li>
-          <li class="paper" data-topic="graph">
+          <li class="paper" data-topic="graph" data-idx="13">
             <span class="num"></span>
             <div>
               <h4><a href="https://arxiv.org/abs/2610.40380">The maximum degree of Nosal graphs</a></h4>
@@ -706,7 +721,7 @@
               <p class="paper-links"><a href="https://arxiv.org/abs/2610.40380">arXiv:2610.40380</a><a href="https://arxiv.org/pdf/2610.40380">PDF</a></p>
             </div>
           </li>
-          <li class="paper" data-topic="graph">
+          <li class="paper" data-topic="graph" data-idx="14">
             <span class="num"></span>
             <div>
               <h4><a href="https://arxiv.org/abs/2611.13847">Counting <i>K</i><sub>4</sub>-saturating non-edges in Nosal graphs</a></h4>
@@ -724,6 +739,7 @@
         <div class="pub-toolbar">
           <div class="filters" role="group" aria-label="Filter journal articles by topic" data-target="journal-list">
             <button class="chip" type="button" data-filter="all" aria-pressed="true" data-i18n="chip-all">All</button>
+            <button class="chip" type="button" data-filter="rep" aria-pressed="false" data-i18n="chip-rep">Representative</button>
             <button class="chip" type="button" data-filter="graph" aria-pressed="false" data-i18n="chip-graph">Graph Theory</button>
             <button class="chip" type="button" data-filter="sets" aria-pressed="false" data-i18n="chip-sets">Extremal Set Theory</button>
             <button class="chip" type="button" data-filter="matrix" aria-pressed="false" data-i18n="chip-matrix">Matrix Analysis</button>
@@ -731,16 +747,16 @@
           <p class="pub-note" data-i18n="ca-note"><sup class="ca">*</sup> Corresponding author</p>
         </div>
         <ol class="paper-list" id="journal-list">
-          <li class="paper" data-topic="graph">
+          <li class="paper" data-topic="graph rep" data-idx="0" data-rep="2">
             <span class="num"></span>
             <div>
               <h4><a href="https://arxiv.org/abs/2511.15431">Edge-spectral Turán theorems for color-critical graphs with applications</a></h4>
               <p class="authors"><strong>Yongtao Li</strong>, Hong Liu, Shengtong Zhang</p>
               <p class="venue is-journal"><em class="journal">SIAM Journal on Discrete Mathematics</em> (2026), to appear.</p>
-              <p class="paper-links"><span class="badge badge-accepted" data-i18n="badge-accepted">Accepted</span><a href="https://epubs.siam.org/journal/sjdmec">Journal</a><a href="https://arxiv.org/abs/2511.15431">arXiv:2511.15431</a></p>
+              <p class="paper-links"><span class="badge badge-rep" data-i18n="badge-rep">Representative</span><span class="badge badge-accepted" data-i18n="badge-accepted">Accepted</span><a href="https://epubs.siam.org/journal/sjdmec">Journal</a><a href="https://arxiv.org/abs/2511.15431">arXiv:2511.15431</a></p>
             </div>
           </li>
-          <li class="paper" data-topic="sets">
+          <li class="paper" data-topic="sets" data-idx="1">
             <span class="num"></span>
             <div>
               <h4><a href="https://doi.org/10.1016/j.ejc.2026.104477">Stabilities of the Kleitman diameter theorem</a></h4>
@@ -749,16 +765,16 @@
               <p class="paper-links"><a href="https://doi.org/10.1016/j.ejc.2026.104477">Journal</a><a href="https://arxiv.org/abs/2411.08325">arXiv:2411.08325</a></p>
             </div>
           </li>
-          <li class="paper" data-topic="graph">
+          <li class="paper" data-topic="graph rep" data-idx="2" data-rep="1">
             <span class="num"></span>
             <div>
               <h4><a href="https://doi.org/10.1016/j.jctb.2026.03.005">More on Nosal’s spectral theorem: Books and 4-cycles</a></h4>
               <p class="authors"><strong>Yongtao Li</strong>, Hong Liu, Shengtong Zhang</p>
               <p class="venue is-journal"><em class="journal">Journal of Combinatorial Theory, Series B</em> <strong>179</strong> (2026), 219–249.</p>
-              <p class="paper-links"><a href="https://doi.org/10.1016/j.jctb.2026.03.005">Journal</a><a href="https://arxiv.org/abs/2508.14366">arXiv:2508.14366</a></p>
+              <p class="paper-links"><span class="badge badge-rep" data-i18n="badge-rep">Representative</span><a href="https://doi.org/10.1016/j.jctb.2026.03.005">Journal</a><a href="https://arxiv.org/abs/2508.14366">arXiv:2508.14366</a></p>
             </div>
           </li>
-          <li class="paper" data-topic="sets">
+          <li class="paper" data-topic="sets" data-idx="3">
             <span class="num"></span>
             <div>
               <h4><a href="https://doi.org/10.1016/j.ejc.2026.104396">Non-uniform pairwise cross <i>t</i>-intersecting families</a></h4>
@@ -767,7 +783,7 @@
               <p class="paper-links"><a href="https://doi.org/10.1016/j.ejc.2026.104396">Journal</a><a href="https://arxiv.org/abs/2508.19725">arXiv:2508.19725</a></p>
             </div>
           </li>
-          <li class="paper" data-topic="graph">
+          <li class="paper" data-topic="graph" data-idx="4">
             <span class="num"></span>
             <div>
               <h4><a href="https://doi.org/10.1016/j.ejc.2026.104373">Some Turán-type results for the signless Laplacian spectral radius</a></h4>
@@ -776,7 +792,7 @@
               <p class="paper-links"><a href="https://doi.org/10.1016/j.ejc.2026.104373">Journal</a><a href="https://arxiv.org/abs/2507.02263">arXiv:2507.02263</a></p>
             </div>
           </li>
-          <li class="paper" data-topic="sets">
+          <li class="paper" data-topic="sets" data-idx="5">
             <span class="num"></span>
             <div>
               <h4><a href="https://doi.org/10.1016/j.jcta.2025.106153">Two results on set families: sturdiness and intersection</a></h4>
@@ -785,7 +801,7 @@
               <p class="paper-links"><a href="https://doi.org/10.1016/j.jcta.2025.106153">Journal</a><a href="https://arxiv.org/abs/2508.19723">arXiv:2508.19723</a></p>
             </div>
           </li>
-          <li class="paper" data-topic="graph">
+          <li class="paper" data-topic="graph" data-idx="6">
             <span class="num"></span>
             <div>
               <h4><a href="https://doi.org/10.1016/j.laa.2025.10.036">The signless Laplacian spectral Turán problems for color-critical graphs</a></h4>
@@ -794,7 +810,7 @@
               <p class="paper-links"><a href="https://doi.org/10.1016/j.laa.2025.10.036">Journal</a><a href="https://arxiv.org/abs/2504.07852">arXiv:2504.07852</a></p>
             </div>
           </li>
-          <li class="paper" data-topic="graph">
+          <li class="paper" data-topic="graph" data-idx="7">
             <span class="num"></span>
             <div>
               <h4><a href="https://doi.org/10.1016/j.disc.2025.114670">Spectral extremal problems for non-bipartite graphs without odd cycles</a></h4>
@@ -803,7 +819,7 @@
               <p class="paper-links"><a href="https://doi.org/10.1016/j.disc.2025.114670">Journal</a><a href="https://arxiv.org/abs/2507.11817">arXiv:2507.11817</a></p>
             </div>
           </li>
-          <li class="paper" data-topic="sets">
+          <li class="paper" data-topic="sets" data-idx="8">
             <span class="num"></span>
             <div>
               <h4><a href="https://doi.org/10.1016/j.disc.2025.114654">Maximal intersecting families revisited</a></h4>
@@ -812,16 +828,16 @@
               <p class="paper-links"><a href="https://doi.org/10.1016/j.disc.2025.114654">Journal</a><a href="https://arxiv.org/abs/2411.03674">arXiv:2411.03674</a></p>
             </div>
           </li>
-          <li class="paper" data-topic="graph">
+          <li class="paper" data-topic="graph rep" data-idx="9" data-rep="3">
             <span class="num"></span>
             <div>
               <h4><a href="https://doi.org/10.1002/jgt.23280">A spectral Erdős–Faudree–Rousseau theorem</a></h4>
               <p class="authors"><strong>Yongtao Li</strong>, Lihua Feng, Yuejian Peng<sup class="ca" title="Corresponding author">*</sup></p>
               <p class="venue is-journal"><em class="journal">Journal of Graph Theory</em> <strong>110</strong> (4) (2025), 408–425.</p>
-              <p class="paper-links"><a href="https://doi.org/10.1002/jgt.23280">Journal</a><a href="https://arxiv.org/abs/2406.13176">arXiv:2406.13176</a></p>
+              <p class="paper-links"><span class="badge badge-rep" data-i18n="badge-rep">Representative</span><a href="https://doi.org/10.1002/jgt.23280">Journal</a><a href="https://arxiv.org/abs/2406.13176">arXiv:2406.13176</a></p>
             </div>
           </li>
-          <li class="paper" data-topic="sets">
+          <li class="paper" data-topic="sets" data-idx="10">
             <span class="num"></span>
             <div>
               <h4><a href="https://doi.org/10.1016/j.aam.2025.102912">A result for hemi-bundled cross-intersecting families</a></h4>
@@ -830,7 +846,7 @@
               <p class="paper-links"><a href="https://doi.org/10.1016/j.aam.2025.102912">Journal</a><a href="https://arxiv.org/abs/2411.08546">arXiv:2411.08546</a></p>
             </div>
           </li>
-          <li class="paper" data-topic="graph">
+          <li class="paper" data-topic="graph" data-idx="11">
             <span class="num"></span>
             <div>
               <h4><a href="https://doi.org/10.1016/j.laa.2025.05.004">Maxima of the <i>Q</i>-index: Forbidden rainbow Hamilton paths, matchings and linear forests</a></h4>
@@ -839,16 +855,16 @@
               <p class="paper-links"><a href="https://doi.org/10.1016/j.laa.2025.05.004">Journal</a></p>
             </div>
           </li>
-          <li class="paper" data-topic="graph">
+          <li class="paper" data-topic="graph rep" data-idx="12" data-rep="4">
             <span class="num"></span>
             <div>
               <h4><a href="https://doi.org/10.1016/j.ejc.2025.104171">Spectral supersaturation: Triangles and bowties</a></h4>
               <p class="authors"><strong>Yongtao Li</strong>, Lihua Feng<sup class="ca" title="Corresponding author">*</sup>, Yuejian Peng</p>
               <p class="venue is-journal"><em class="journal">European Journal of Combinatorics</em> <strong>128</strong> (2025), 104171.</p>
-              <p class="paper-links"><a href="https://doi.org/10.1016/j.ejc.2025.104171">Journal</a><a href="https://arxiv.org/abs/2407.04950">arXiv:2407.04950</a></p>
+              <p class="paper-links"><span class="badge badge-rep" data-i18n="badge-rep">Representative</span><a href="https://doi.org/10.1016/j.ejc.2025.104171">Journal</a><a href="https://arxiv.org/abs/2407.04950">arXiv:2407.04950</a></p>
             </div>
           </li>
-          <li class="paper" data-topic="sets">
+          <li class="paper" data-topic="sets" data-idx="13">
             <span class="num"></span>
             <div>
               <h4><a href="https://doi.org/10.1016/j.jcta.2025.106062">Proof of Frankl’s conjecture on cross-intersecting families</a></h4>
@@ -857,7 +873,7 @@
               <p class="paper-links"><a href="https://doi.org/10.1016/j.jcta.2025.106062">Journal</a><a href="https://arxiv.org/abs/2411.09490">arXiv:2411.09490</a></p>
             </div>
           </li>
-          <li class="paper" data-topic="graph">
+          <li class="paper" data-topic="graph" data-idx="14">
             <span class="num"></span>
             <div>
               <h4><a href="https://doi.org/10.1016/j.disc.2024.114391">Spectral extremal graphs for fan graphs</a></h4>
@@ -866,7 +882,7 @@
               <p class="paper-links"><a href="https://doi.org/10.1016/j.disc.2024.114391">Journal</a><a href="https://arxiv.org/abs/2404.03423">arXiv:2404.03423</a></p>
             </div>
           </li>
-          <li class="paper" data-topic="graph">
+          <li class="paper" data-topic="graph" data-idx="15">
             <span class="num"></span>
             <div>
               <h4><a href="https://doi.org/10.1016/j.disc.2024.114249">Extremal graphs for the odd prism</a></h4>
@@ -875,7 +891,7 @@
               <p class="paper-links"><a href="https://doi.org/10.1016/j.disc.2024.114249">Journal</a><a href="https://arxiv.org/abs/2302.03278">arXiv:2302.03278</a></p>
             </div>
           </li>
-          <li class="paper" data-topic="sets">
+          <li class="paper" data-topic="sets" data-idx="16">
             <span class="num"></span>
             <div>
               <h4><a href="https://www.combinatorics.org/ojs/index.php/eljc/article/view/v31i4p3">Stabilities for non-uniform <i>t</i>-intersecting families</a></h4>
@@ -884,7 +900,7 @@
               <p class="paper-links"><a href="https://www.combinatorics.org/ojs/index.php/eljc/article/view/v31i4p3">Journal</a><a href="https://arxiv.org/abs/2401.07624">arXiv:2401.07624</a></p>
             </div>
           </li>
-          <li class="paper" data-topic="graph">
+          <li class="paper" data-topic="graph" data-idx="17">
             <span class="num"></span>
             <div>
               <h4><a href="https://doi.org/10.37236/11808">Spectral extremal graphs without intersecting triangles as a minor</a></h4>
@@ -893,7 +909,7 @@
               <p class="paper-links"><a href="https://doi.org/10.37236/11808">Journal</a><a href="https://arxiv.org/abs/2301.06008">arXiv:2301.06008</a></p>
             </div>
           </li>
-          <li class="paper" data-topic="graph">
+          <li class="paper" data-topic="graph" data-idx="18">
             <span class="num"></span>
             <div>
               <h4><a href="https://doi.org/10.1016/j.disc.2024.114128">Spectral radius and rainbow Hamilton paths of a graph</a></h4>
@@ -902,7 +918,7 @@
               <p class="paper-links"><a href="https://doi.org/10.1016/j.disc.2024.114128">Journal</a></p>
             </div>
           </li>
-          <li class="paper" data-topic="graph">
+          <li class="paper" data-topic="graph" data-idx="19">
             <span class="num"></span>
             <div>
               <h4><a href="https://doi.org/10.1016/j.aam.2024.102720">A spectral Erdős–Rademacher theorem</a></h4>
@@ -911,7 +927,7 @@
               <p class="paper-links"><a href="https://doi.org/10.1016/j.aam.2024.102720">Journal</a><a href="https://arxiv.org/abs/2406.05609">arXiv:2406.05609</a></p>
             </div>
           </li>
-          <li class="paper" data-topic="graph">
+          <li class="paper" data-topic="graph" data-idx="20">
             <span class="num"></span>
             <div>
               <h4><a href="https://doi.org/10.37236/12009">A spectral extremal problem on non-bipartite triangle-free graphs</a></h4>
@@ -920,7 +936,7 @@
               <p class="paper-links"><a href="https://doi.org/10.37236/12009">Journal</a><a href="https://arxiv.org/abs/2304.00716">arXiv:2304.00716</a></p>
             </div>
           </li>
-          <li class="paper" data-topic="graph">
+          <li class="paper" data-topic="graph" data-idx="21">
             <span class="num"></span>
             <div>
               <h4><a href="https://doi.org/10.1016/j.disc.2023.113781">Spectral radius of graphs forbidden <i>C</i><sub>7</sub> or <i>C</i><sub>6</sub><sup>△</sup></a></h4>
@@ -929,16 +945,16 @@
               <p class="paper-links"><a href="https://doi.org/10.1016/j.disc.2023.113781">Journal</a></p>
             </div>
           </li>
-          <li class="paper" data-topic="graph">
+          <li class="paper" data-topic="graph rep" data-idx="22" data-rep="5">
             <span class="num"></span>
             <div>
               <h4><a href="https://doi.org/10.1137/22M1507814">Refinement on spectral Turán’s theorem</a></h4>
               <p class="authors"><strong>Yongtao Li</strong>, Yuejian Peng</p>
               <p class="venue is-journal"><em class="journal">SIAM Journal on Discrete Mathematics</em> <strong>37</strong> (4) (2023), 2462–2485.</p>
-              <p class="paper-links"><a href="https://doi.org/10.1137/22M1507814">Journal</a><a href="https://arxiv.org/abs/2204.09194">arXiv:2204.09194</a></p>
+              <p class="paper-links"><span class="badge badge-rep" data-i18n="badge-rep">Representative</span><a href="https://doi.org/10.1137/22M1507814">Journal</a><a href="https://arxiv.org/abs/2204.09194">arXiv:2204.09194</a></p>
             </div>
           </li>
-          <li class="paper" data-topic="graph">
+          <li class="paper" data-topic="graph" data-idx="23">
             <span class="num"></span>
             <div>
               <h4><a href="https://doi.org/10.1016/j.disc.2023.113680">Spectral extremal graphs for the bowtie</a></h4>
@@ -947,7 +963,7 @@
               <p class="paper-links"><a href="https://doi.org/10.1016/j.disc.2023.113680">Journal</a><a href="https://arxiv.org/abs/2212.05739">arXiv:2212.05739</a></p>
             </div>
           </li>
-          <li class="paper" data-topic="graph">
+          <li class="paper" data-topic="graph" data-idx="24">
             <span class="num"></span>
             <div>
               <h4><a href="https://doi.org/10.37236/11236">The maximum spectral radius of non-bipartite graphs forbidding short odd cycles</a></h4>
@@ -956,7 +972,7 @@
               <p class="paper-links"><a href="https://doi.org/10.37236/11236">Journal</a><a href="https://arxiv.org/abs/2204.09884">arXiv:2204.09884</a></p>
             </div>
           </li>
-          <li class="paper" data-topic="graph">
+          <li class="paper" data-topic="graph" data-idx="25">
             <span class="num"></span>
             <div>
               <h4><a href="https://doi.org/10.1016/j.disc.2022.112907">The spectral radius of graphs with no intersecting odd cycles</a></h4>
@@ -965,7 +981,7 @@
               <p class="paper-links"><a href="https://doi.org/10.1016/j.disc.2022.112907">Journal</a><a href="https://arxiv.org/abs/2106.00587">arXiv:2106.00587</a></p>
             </div>
           </li>
-          <li class="paper" data-topic="graph">
+          <li class="paper" data-topic="graph" data-idx="26">
             <span class="num"></span>
             <div>
               <h4><a href="https://doi.org/10.1080/03081087.2022.2093321">Sufficient spectral conditions for graphs being <i>k</i>-edge-Hamiltonian or <i>k</i>-Hamiltonian</a></h4>
@@ -974,7 +990,7 @@
               <p class="paper-links"><a href="https://doi.org/10.1080/03081087.2022.2093321">Journal</a><a href="https://arxiv.org/abs/2109.01973">arXiv:2109.01973</a></p>
             </div>
           </li>
-          <li class="paper" data-topic="graph">
+          <li class="paper" data-topic="graph" data-idx="27">
             <span class="num"></span>
             <div>
               <h4><a href="https://doi.org/10.1016/j.laa.2022.03.015">Spectral extremal graphs for intersecting cliques</a></h4>
@@ -983,7 +999,7 @@
               <p class="paper-links"><a href="https://doi.org/10.1016/j.laa.2022.03.015">Journal</a><a href="https://arxiv.org/abs/2108.03587">arXiv:2108.03587</a></p>
             </div>
           </li>
-          <li class="paper" data-topic="graph">
+          <li class="paper" data-topic="graph" data-idx="28">
             <span class="num"></span>
             <div>
               <h4><a href="https://arxiv.org/abs/2111.03309">A survey on spectral conditions for some extremal graph problems</a></h4>
@@ -992,7 +1008,7 @@
               <p class="paper-links"><a href="http://www.oaj.pku.edu.cn/sxjz/CN/1000-0917/home.shtml">Journal</a><a href="https://arxiv.org/abs/2111.03309">arXiv:2111.03309</a></p>
             </div>
           </li>
-          <li class="paper" data-topic="matrix">
+          <li class="paper" data-topic="matrix" data-idx="29">
             <span class="num"></span>
             <div>
               <h4><a href="https://doi.org/10.1080/03081087.2022.2121368">Improvements on some partial trace inequalities for positive semidefinite block matrices</a></h4>
@@ -1001,7 +1017,7 @@
               <p class="paper-links"><a href="https://doi.org/10.1080/03081087.2022.2121368">Journal</a><a href="https://arxiv.org/abs/2111.14626">arXiv:2111.14626</a></p>
             </div>
           </li>
-          <li class="paper" data-topic="matrix">
+          <li class="paper" data-topic="matrix" data-idx="30">
             <span class="num"></span>
             <div>
               <h4><a href="https://doi.org/10.1016/j.laa.2022.01.006">Extensions of some matrix inequalities related to trace and partial traces</a></h4>
@@ -1010,7 +1026,7 @@
               <p class="paper-links"><a href="https://doi.org/10.1016/j.laa.2022.01.006">Journal</a><a href="https://arxiv.org/abs/2003.04520">arXiv:2003.04520</a></p>
             </div>
           </li>
-          <li class="paper" data-topic="matrix">
+          <li class="paper" data-topic="matrix" data-idx="31">
             <span class="num"></span>
             <div>
               <h4><a href="https://doi.org/10.1080/03081087.2021.1882370">An Oppenheim type inequality for positive definite block matrices</a></h4>
@@ -1019,7 +1035,7 @@
               <p class="paper-links"><a href="https://doi.org/10.1080/03081087.2021.1882370">Journal</a><a href="https://arxiv.org/abs/2109.02819">arXiv:2109.02819</a></p>
             </div>
           </li>
-          <li class="paper" data-topic="matrix">
+          <li class="paper" data-topic="matrix" data-idx="32">
             <span class="num"></span>
             <div>
               <h4><a href="https://arxiv.org/abs/2003.05230">Inequalities for generalized matrix function and inner product</a></h4>
@@ -1028,7 +1044,7 @@
               <p class="paper-links"><a href="https://jmi.ele-math.com/16-11/Inequalities-for-generalized-matrix-function-and-inner-product">Journal</a><a href="https://arxiv.org/abs/2003.05230">arXiv:2003.05230</a></p>
             </div>
           </li>
-          <li class="paper" data-topic="matrix">
+          <li class="paper" data-topic="matrix" data-idx="33">
             <span class="num"></span>
             <div>
               <h4>Partial determinant inequalities for positive semidefinite block matrices</h4>
@@ -1037,7 +1053,7 @@
               <p class="paper-links"><a href="https://jmi.ele-math.com/15-98/Partial-determinant-inequalities-for-positive-semidefinite-block-matrices">Journal</a></p>
             </div>
           </li>
-          <li class="paper" data-topic="matrix">
+          <li class="paper" data-topic="matrix" data-idx="34">
             <span class="num"></span>
             <div>
               <h4><a href="https://doi.org/10.7153/oam-2021-15-75">A new matrix inequality involving partial traces</a></h4>
@@ -1046,7 +1062,7 @@
               <p class="paper-links"><a href="https://doi.org/10.7153/oam-2021-15-75">Journal</a><a href="https://arxiv.org/abs/2002.09649">arXiv:2002.09649</a></p>
             </div>
           </li>
-          <li class="paper" data-topic="matrix">
+          <li class="paper" data-topic="matrix" data-idx="35">
             <span class="num"></span>
             <div>
               <h4><a href="https://doi.org/10.7153/oam-2021-15-47">An Oppenheim type determinantal inequality for the Khatri–Rao product</a></h4>
@@ -1055,7 +1071,7 @@
               <p class="paper-links"><a href="https://doi.org/10.7153/oam-2021-15-47">Journal</a><a href="https://arxiv.org/abs/2003.04522">arXiv:2003.04522</a></p>
             </div>
           </li>
-          <li class="paper" data-topic="matrix">
+          <li class="paper" data-topic="matrix" data-idx="36">
             <span class="num"></span>
             <div>
               <h4><a href="https://doi.org/10.7153/mia-2021-24-37">Remarks on the monotonicity and convexity of Jensen’s function</a></h4>
@@ -1064,7 +1080,7 @@
               <p class="paper-links"><a href="https://doi.org/10.7153/mia-2021-24-37">Journal</a></p>
             </div>
           </li>
-          <li class="paper" data-topic="matrix">
+          <li class="paper" data-topic="matrix" data-idx="37">
             <span class="num"></span>
             <div>
               <h4><a href="https://arxiv.org/abs/2001.02345">Inequalities regarding partial trace and partial determinant</a></h4>
@@ -1073,7 +1089,7 @@
               <p class="paper-links"><a href="https://mia.ele-math.com/23-39/Inequalities-regarding-partial-trace-and-partial-determinant">Journal</a><a href="https://arxiv.org/abs/2001.02345">arXiv:2001.02345</a></p>
             </div>
           </li>
-          <li class="paper" data-topic="matrix">
+          <li class="paper" data-topic="matrix" data-idx="38">
             <span class="num"></span>
             <div>
               <h4><a href="https://doi.org/10.1016/j.laa.2020.05.037">Extensions of Brunn–Minkowski’s inequality to multiple matrices</a></h4>
@@ -1082,7 +1098,7 @@
               <p class="paper-links"><a href="https://doi.org/10.1016/j.laa.2020.05.037">Journal</a><a href="https://arxiv.org/abs/2002.12560">arXiv:2002.12560</a></p>
             </div>
           </li>
-          <li class="paper" data-topic="matrix">
+          <li class="paper" data-topic="matrix" data-idx="39">
             <span class="num"></span>
             <div>
               <h4><a href="https://doi.org/10.1016/j.laa.2019.12.036">Some applications of two completely copositive maps</a></h4>
@@ -1155,8 +1171,13 @@
           chip.addEventListener('click', function () {
             var topic = chip.getAttribute('data-filter');
             chips.forEach(function (c) { c.setAttribute('aria-pressed', String(c === chip)); });
-            Array.prototype.forEach.call(list.children, function (p) {
-              p.classList.toggle('is-hidden', topic !== 'all' && p.getAttribute('data-topic') !== topic);
+            var key = topic === 'rep' ? 'data-rep' : 'data-idx';
+            Array.prototype.slice.call(list.children).sort(function (a, b) {
+              return (+a.getAttribute(key) || 0) - (+b.getAttribute(key) || 0);
+            }).forEach(function (p) {
+              var tags = ' ' + p.getAttribute('data-topic') + ' ';
+              p.classList.toggle('is-hidden', topic !== 'all' && tags.indexOf(' ' + topic + ' ') < 0);
+              list.appendChild(p);
             });
             renumber();
           });
@@ -1210,7 +1231,8 @@
               "ymsc": "中心个人页面",
               "h-about": "个人简介",
               "about-1": "我是<a href=\"https://www.tsinghua.edu.cn/\">清华大学</a><a href=\"https://ymsc.tsinghua.edu.cn/\">丘成桐数学科学中心</a>博士后，合作导师为<a href=\"http://staff.ustc.edu.cn/~jiema/\">马杰</a>教授，主要从事谱图理论与极值组合的研究。",
-              "about-2": "我关注图的特征值如何决定图的结构。在“谱半径与子结构数目”问题上，我与合作者取得了一系列结果，加强和推广了极值图论中的多个经典定理，例如 Erdős–Rademacher 定理、Erdős–Faudree–Rousseau 定理、Lovász–Simonovits 定理、Mubayi 定理和 Pikhurko–Yilma 定理。关于给定边数的谱极值问题，我们对禁用任意图 <i>F</i> 建立了边谱极值问题的渐近公式与稳定性定理，统一了 Erdős–Stone–Simonovits 关于 Turán 数、以及 Nikiforov 关于顶点谱版本的渐近公式与稳定性定理。通过发展边谱稳定性方法，我们还解决了禁用色临界图与几乎二部图的边谱极值问题。此外，我也研究极值集合论中的相交族与交叉相交族。",
+              "about-2": "我关注图的特征值如何决定图的结构。在“谱半径与子结构数目”问题上，我与合作者取得了一系列结果，加强和推广了极值图论中的多个经典定理，例如 Erdős–Rademacher 定理、Erdős–Faudree–Rousseau 定理、Lovász–Simonovits 定理、Mubayi 定理和 Pikhurko–Yilma 定理。关于给定边数的谱极值问题，我们对禁用任意图 <i>F</i> 建立了边谱极值问题的渐近公式与稳定性定理，统一了 Erdős–Stone–Simonovits 关于 Turán 数、以及 Nikiforov 关于顶点谱版本的渐近公式与稳定性定理。通过发展边谱稳定性方法，我们还解决了禁用色临界图与几乎二部图的边谱极值问题。",
+              "about-2b": "近期，我与合作者证明了 Sidorenko 猜想与其谱加强形式等价。作为应用，对于给定边数且谱半径较大的图，我们得到了完全二部图与偶圈拷贝数目的渐近最优下界。我还发展了一种熵方法，在加权 Turán 定理与谱 Turán 定理之间建立了联系。对每个色临界图 <i>F</i>，该方法用途径数目给出了不含 <i>F</i> 的图的谱半径的最优上界，从而在同一框架下处理顶点谱与边谱 Turán 问题。在谱问题之外，我也研究极值集合论中的相交族与交叉相交族。",
               "about-3": "目前受中国博士后科学基金（No.&nbsp;2026M793384）、国家资助博士后研究人员计划（No.&nbsp;GZC20261656）和国家自然科学基金（No.&nbsp;12601675）资助。",
               "h-research": "研究方向",
               "r1-t": "谱图理论",
@@ -1240,6 +1262,8 @@
               "h-pre": "预印本",
               "h-jour": "期刊论文",
               "chip-all": "全部",
+              "chip-rep": "代表作",
+              "badge-rep": "代表作",
               "chip-graph": "图论",
               "chip-sets": "极值集合论",
               "chip-matrix": "矩阵分析",
