@@ -22,6 +22,7 @@
       --line: #e3e8ee;
       --soft: #f4f7fa;
       --tint: #eaf1f8;
+      --hover-bg: #f0f6fc;
       --accent: #1d5480;
       --accent-2: #3a7cb4;
       --link: #1b5f94;
@@ -41,6 +42,7 @@
         --line: #26313d;
         --soft: #141c25;
         --tint: #172534;
+        --hover-bg: #142030;
         --accent: #7fb2e0;
         --accent-2: #a3c9ec;
         --link: #8dc0ee;
@@ -259,10 +261,13 @@
       position: relative; display: grid; grid-template-columns: 40px minmax(0, 1fr);
       gap: 4px; padding: 14px 18px 14px 4px; margin: 0 0 8px;
       border: 1px solid transparent; border-radius: 12px; background: var(--bg);
-      transition: border-color .2s ease, box-shadow .2s ease, transform .2s ease;
+      transition: border-color .2s ease, background .2s ease, box-shadow .2s ease, transform .2s ease;
     }
     @media (hover: hover) {
-      .paper:hover { border-color: var(--accent-2); box-shadow: var(--shadow); transform: translateY(-2px); }
+      .paper:hover {
+        border-color: var(--accent-2); background: var(--hover-bg);
+        box-shadow: var(--shadow); transform: translateY(-2px);
+      }
     }
     .paper.is-hidden { display: none; }
     .pub-note { margin: 0; font-size: 0.85rem; color: var(--muted); }
