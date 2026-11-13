@@ -14,6 +14,47 @@
   <meta property="og:description" content="Postdoctoral researcher at YMSC, Tsinghua University. Spectral graph theory, extremal graph theory and extremal set theory.">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d5480'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Georgia,serif' font-size='30' fill='white'%3EYL%3C/text%3E%3C/svg%3E">
   <style>
+    .masthead nav { align-items: center; }
+.search-toggle {
+  display: inline-flex; align-items: center;
+  justify-content: center; width: 34px;
+  height: 34px; border: 1px solid var(--line);
+  border-radius: 50%; background: var(--bg);
+  color: var(--accent); cursor: pointer;
+  transition: border-color .2s ease,
+              background .2s ease;
+}
+.search-toggle:hover,
+.search-toggle[aria-expanded="true"] {
+  border-color: var(--accent-2);
+  background: var(--hover-bg);
+}
+.search-toggle svg { width: 16px; height: 16px; }
+.search-bar { border-top: 1px solid var(--line); }
+.search-bar[hidden] { display: none; }
+.search-inner {
+  max-width: 1240px; margin: 0 auto;
+  padding: 10px 40px; display: flex;
+  align-items: center; gap: 14px;
+}
+#paper-search {
+  flex: 1; max-width: 520px;
+  padding: 8px 14px; font: inherit;
+  font-size: 0.95rem; color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 999px; background: var(--bg);
+}
+#paper-search:focus {
+  outline: 2px solid var(--link);
+  outline-offset: 2px;
+}
+.search-status {
+  font-size: 0.88rem; color: var(--muted);
+}
+.paper.no-match { display: none; }
+@media (max-width: 700px) {
+  .search-inner { padding: 8px 16px; }
+}
     :root {
       --bg: #ffffff;
       --ink: #26323d;
@@ -432,12 +473,30 @@
         <a href="#preprints" data-i18n="nav-pre">Preprints</a>
         <a href="#journal-articles" data-i18n="nav-jour">Journal Articles</a>
         <a href="#contact" data-i18n="nav-contact">Contact</a>
+<button class="search-toggle" type="button"
+        aria-label="Search" aria-expanded="false">
+  <svg viewBox="0 0 24 24" fill="none"
+       stroke="currentColor" stroke-width="1.8"
+       stroke-linecap="round" stroke-linejoin="round"
+       aria-hidden="true">
+    <circle cx="11" cy="11" r="7"/>
+    <path d="m20 20-3.5-3.5"/>
+  </svg>
+</button> 
       </nav>
       <button class="lang-toggle" type="button" aria-label="Switch language / 切换语言">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
         <span class="lang-label">中文</span>
       </button>
-    </div>
+    </div> 
+    <div class="search-bar" hidden>
+  <div class="search-inner">
+    <input type="search" id="paper-search"
+           autocomplete="off">
+    <span class="search-status"
+          aria-live="polite"></span>
+  </div>
+</div>
   </header>
 
   <div class="page-layout">
@@ -1305,6 +1364,85 @@
       else { try { start = localStorage.getItem('lang') || 'en'; } catch (e) {} }
       if (start === 'zh') setLang('zh');
     })();
+    (function () {
+  var btn = document.querySelector('.search-toggle');
+  var bar = document.querySelector('.search-bar');
+  var input = document.getElementById('paper-search');
+  var status = bar.querySelector('.search-status');
+  var papers = document.querySelectorAll('.paper');
+  function zh() {
+    return document.documentElement.lang === 'zh-CN';
+  }
+  function norm(t) {
+    return t.toLowerCase().normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '');
+  }
+  function labels() {
+    input.placeholder = zh()
+      ? '搜索题目、作者、期刊…'
+      : 'Search title, author, journal…';
+    btn.setAttribute('aria-label',
+      zh() ? '搜索' : 'Search');
+  }
+  function run() {
+    var q = norm(input.value.trim());
+    var words = q ? q.split(/\s+/) : [];
+    if (words.length) {
+      document.querySelectorAll(
+        '.chip[data-filter="all"]'
+      ).forEach(function (c) {
+        if (c.getAttribute('aria-pressed') !== 'true')
+          c.click();
+      });
+    }
+    var n = 0;
+    papers.forEach(function (p) {
+      var t = norm(p.textContent);
+      var hit = words.every(function (w) {
+        return t.indexOf(w) !== -1;
+      });
+      p.classList.toggle('no-match', !hit);
+      if (hit && words.length) n++;
+    });
+    if (!words.length) status.textContent = '';
+    else if (!n)
+      status.textContent = zh() ? '无结果' : 'No results';
+    else status.textContent = zh()
+      ? n + ' 条结果'
+      : n + (n === 1 ? ' result' : ' results');
+  }
+  function open() {
+    bar.hidden = false;
+    btn.setAttribute('aria-expanded', 'true');
+    labels();
+    input.focus();
+  }
+  function close() {
+    input.value = '';
+    run();
+    bar.hidden = true;
+    btn.setAttribute('aria-expanded', 'false');
+    btn.focus();
+  }
+  btn.addEventListener('click', function () {
+    if (bar.hidden) open(); else close();
+  });
+  input.addEventListener('input', run);
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') close();
+    if (e.key === 'Enter') {
+      var hit = document.querySelector(
+        '.paper:not(.is-hidden):not(.no-match)');
+      if (hit && input.value.trim())
+        hit.scrollIntoView({
+          behavior: 'smooth', block: 'center'});
+    }
+  });
+  document.querySelector('.lang-toggle')
+    .addEventListener('click', function () {
+      setTimeout(function () { labels(); run(); }, 0);
+    });
+})();
   </script>
 </body>
 </html>
